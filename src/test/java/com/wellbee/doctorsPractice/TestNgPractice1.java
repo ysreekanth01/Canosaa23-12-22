@@ -3,7 +3,7 @@ package com.wellbee.doctorsPractice;
 import org.testng.annotations.Test;
 
 public class TestNgPractice1 {
-	@Test(groups="sanity")
+	@Test
 	public void test1() {
 		System.out.println("TEST1");
 	}

@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -47,6 +48,12 @@ public class WebDriverUtility {
 			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
 		}
+		else if(browser.equals("edge"))
+		{
+			WebDriverManager.edgedriver().setup();
+			driver=new EdgeDriver();
+		}
+		
 		else {
 			System.out.println("Please enter valid browser name");
 		}
@@ -112,6 +119,11 @@ public class WebDriverUtility {
 		}
 		return dst.getAbsolutePath();
 		
+	}
+	public String takeScreenShot() {
+		TakesScreenshot t=(TakesScreenshot) driver;
+		String src = t.getScreenshotAs(OutputType.BASE64);
+		return src;
 	}
 	
 	}

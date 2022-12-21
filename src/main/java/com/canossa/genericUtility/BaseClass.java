@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import com.canossa.objectRepository.AddDoctorPage;
 import com.canossa.objectRepository.AdminCommonPage;
@@ -32,9 +33,9 @@ public class BaseClass {
 	protected AddDoctorPage addDoctorPage;
 	protected ManageDoctorsPage manageDoctorsPage;
 
-	
+	@Parameters("browser")
 	@BeforeClass
-	public void classSetup() {
+	public void classSetup(String browser) {
 		
 		webDriverUtility= new WebDriverUtility();
 		ThreadSafe.setWebdriverUtility(webDriverUtility);
@@ -55,7 +56,7 @@ public class BaseClass {
 		
 		String email=execelUtility.getDataFromExcel(IConstantPath.EXCEL_PATH,SheetName.DOCTOR.convertToString(), 4, 2);
 		
-		driver = webDriverUtility.launchApplication(browser1,sec, url1);
+		driver = webDriverUtility.launchApplication(browser,sec, url1);
 	
 		driver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
 		driver.get(url1);
@@ -96,6 +97,7 @@ public class BaseClass {
 	}
 	@AfterClass
 	public void classTearDown() {
+		driver.close();
 		
 	}
 

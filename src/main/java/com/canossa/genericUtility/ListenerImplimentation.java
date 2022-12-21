@@ -37,10 +37,12 @@ public class ListenerImplimentation implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		String path = ThreadSafe.getWebdriverUtility().takeScreenShot(arg0.getMethod().getMethodName());
-		//test.fail(arg0.getThrowable());
+		//String absolutePath = ThreadSafe.getWebdriverUtility().takeScreenShot(arg0.getMethod().getMethodName());
+		//ThreadSafe.getExtentTest().addScreenCaptureFromPath(absolutePath, arg0.getMethod().getMethodName());
+		
 		ThreadSafe.getExtentTest().fail(arg0.getThrowable());
-		ThreadSafe.getExtentTest().addScreenCaptureFromPath(path, arg0.getMethod().getMethodName());
+		String path = ThreadSafe.getWebdriverUtility().takeScreenShot();
+		ThreadSafe.getExtentTest().addScreenCaptureFromBase64String(path, arg0.getMethod().getMethodName());
 	}
 
 	@Override

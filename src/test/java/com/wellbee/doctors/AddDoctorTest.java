@@ -31,8 +31,9 @@ import com.canossa.genericUtility.BaseClass;
 
 
 	public class AddDoctorTest extends BaseClass {
-	@Test
+	@Test(groups= {"regression","sanity"})
 		public  void test() throws Exception {
+		Thread.sleep(3000);
 
 			String expectedDocSpecialization=execelUtility.getDataFromExcel(IConstantPath.EXCEL_PATH,SheetName.DOCTOR.convertToString(), 2, 2);
 			adminCommonPage.doctorSpecializationClick();

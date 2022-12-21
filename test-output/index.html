@@ -2,10 +2,12 @@
 
 <html>
   <head>
+  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -22,6 +24,7 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
@@ -48,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\ysree\eclipse-workspace\com.hms.canossa.framework\testngParallel.xml</span>
+                    <span>C:\Users\ysree\eclipse-workspace\com.hms.canossa.framework\testngCrossBrowser1.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -58,7 +61,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +105,26 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.wellbee.doctors.AddDoctorCheckITTest" class="method navigator-link" hash-for-method="addDoctorIT">addDoctorIT</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.wellbee.doctors.Practice1" class="method navigator-link" hash-for-method="practice1">practice1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.wellbee.doctors.Practice2" class="method navigator-link" hash-for-method="practice2">practice2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.wellbee.doctors.Practice3" class="method navigator-link" hash-for-method="practice3">practice3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.wellbee.doctors.AddDoctorCheckITTest" class="method navigator-link" hash-for-method="sampleTest">sampleTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -124,14 +147,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.wellbee.doctors.AddDoctorCheckITTest</span>
+              <span class="class-name">com.wellbee.doctors.Practice3</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addDoctorIT">
-                  </a> <!-- addDoctorIT -->
-                  <span class="method-name">addDoctorIT</span>
+                  <a name="practice3">
+                  </a> <!-- practice3 -->
+                  <span class="method-name">practice3</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -151,26 +174,80 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.wellbee.doctors.Practice1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="practice1">
+                  </a> <!-- practice1 -->
+                  <span class="method-name">practice1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.wellbee.doctors.AddDoctorCheckITTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addDoctorIT">
+                  </a> <!-- addDoctorIT -->
+                  <span class="method-name">addDoctorIT</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sampleTest">
+                  </a> <!-- sampleTest -->
+                  <span class="method-name">sampleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.wellbee.doctors.Practice2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="practice2">
+                  </a> <!-- practice2 -->
+                  <span class="method-name">practice2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ysree\eclipse-workspace\com.hms.canossa.framework\testngParallel.xml</span>
+            <span class="header-content">C:\Users\ysree\eclipse-workspace\com.hms.canossa.framework\testngCrossBrowser1.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.canossa.genericUtility.ListenerImplimentation&quot;/&gt;
-  &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test1&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test1&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.wellbee.doctors.AddDoctorCheckITTest&quot;/&gt;
+      &lt;class name=&quot;com.wellbee.doctors.Practice2&quot;/&gt;
+      &lt;class name=&quot;com.wellbee.doctors.Practice1&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test2&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test2&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.wellbee.doctors.Practice3&quot;/&gt;
       &lt;class name=&quot;com.wellbee.doctors.AddDoctorTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test2 --&gt;
@@ -185,10 +262,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test1 (1 class)</span>
+                <span class="test-name">Test1 (3 classes)</span>
               </li>
               <li>
-                <span class="test-name">Test2 (1 class)</span>
+                <span class="test-name">Test2 (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,6 +275,22 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">sanity</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">test</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -214,20 +307,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test')
 data.setCell(0, 2, 'com.wellbee.doctors.AddDoctorTest')
-data.setCell(0, 3, 3837);
+data.setCell(0, 3, 16441);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'addDoctorIT')
 data.setCell(1, 2, 'com.wellbee.doctors.AddDoctorCheckITTest')
-data.setCell(1, 3, 867);
+data.setCell(1, 3, 4066);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'practice2')
+data.setCell(2, 2, 'com.wellbee.doctors.Practice2')
+data.setCell(2, 3, 2);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'sampleTest')
+data.setCell(3, 2, 'com.wellbee.doctors.AddDoctorCheckITTest')
+data.setCell(3, 3, 2);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'practice3')
+data.setCell(4, 2, 'com.wellbee.doctors.Practice3')
+data.setCell(4, 3, 2);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'practice1')
+data.setCell(5, 2, 'com.wellbee.doctors.Practice1')
+data.setCell(5, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -255,69 +364,154 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.wellbee.doctors.AddDoctorCheckITTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">classSetup</span>
+                <span class="method-name">classSetup(chrome)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.wellbee.doctors.Practice3</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetup(firefox)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.wellbee.doctors.AddDoctorCheckITTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">methodSetUp</span>
+                <span class="method-start">4156 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">addDoctorIT</span>
+                <span class="method-start">5128 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.wellbee.doctors.Practice3</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">methodSetUp</span>
+                <span class="method-start">7802 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">practice3</span>
+                <span class="method-start">8627 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown</span>
+                <span class="method-start">8633 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">classTearDown</span>
+                <span class="method-start">9079 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.wellbee.doctors.AddDoctorCheckITTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown</span>
+                <span class="method-start">9196 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">methodSetUp</span>
+                <span class="method-start">9371 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">sampleTest</span>
+                <span class="method-start">9822 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown</span>
+                <span class="method-start">9825 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">classTearDown</span>
+                <span class="method-start">10059 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.wellbee.doctors.Practice2</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetup(chrome)</span>
+                <span class="method-start">10140 ms</span>
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.wellbee.doctors.AddDoctorTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">classSetup</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-name">classSetup(firefox)</span>
+                <span class="method-start">10333 ms</span>
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.wellbee.doctors.AddDoctorCheckITTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.wellbee.doctors.Practice2</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">methodSetUp</span>
-                <span class="method-start">4232 ms</span>
+                <span class="method-start">12028 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">practice2</span>
+                <span class="method-start">13184 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown</span>
+                <span class="method-start">13188 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">classTearDown</span>
+                <span class="method-start">13401 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.wellbee.doctors.Practice1</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">classSetup(chrome)</span>
+                <span class="method-start">13527 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">methodSetUp</span>
+                <span class="method-start">15057 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.wellbee.doctors.AddDoctorTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">methodSetUp</span>
-                <span class="method-start">4469 ms</span>
+                <span class="method-start">15759 ms</span>
               </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.wellbee.doctors.AddDoctorCheckITTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.wellbee.doctors.Practice1</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">addDoctorIT</span>
-                <span class="method-start">5333 ms</span>
+                <span class="method-name">practice1</span>
+                <span class="method-start">16051 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">methodTearDown</span>
+                <span class="method-start">16052 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">classTearDown</span>
+                <span class="method-start">16287 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.wellbee.doctors.AddDoctorTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">test</span>
-                <span class="method-start">5648 ms</span>
+                <span class="method-start">16767 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.wellbee.doctors.AddDoctorCheckITTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">methodTearDown</span>
-                <span class="method-start">6205 ms</span>
+                <span class="method-start">33209 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">classTearDown</span>
-                <span class="method-start">6342 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.wellbee.doctors.AddDoctorTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">methodTearDown</span>
-                <span class="method-start">9493 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">classTearDown</span>
-                <span class="method-start">9647 ms</span>
+                <span class="method-start">33524 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

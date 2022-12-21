@@ -19,11 +19,4 @@ public enum PropertyFileKeys {
 	public String convertToString() {
 		return keys.toString();
 	}
-
-	
-	
-	
-	
-	
-
 }

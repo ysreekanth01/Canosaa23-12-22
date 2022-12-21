@@ -15,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -105,6 +106,7 @@ public class AddDoctorCheckIT {
 			
 			Alert a = driver.switchTo().alert();
 			a.accept();
+		
 			
 			List<WebElement> validation = driver.findElements(By.xpath("//tbody/tr/td[3]"));
 			for(WebElement vd:validation) {

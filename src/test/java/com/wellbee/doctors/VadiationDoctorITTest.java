@@ -21,8 +21,9 @@ package com.wellbee.doctors;
 	import org.openqa.selenium.firefox.FirefoxDriver;
 	import org.openqa.selenium.support.ui.ExpectedConditions;
 	import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
-	import com.canossa.genericUtility.ExecelUtility;
+import com.canossa.genericUtility.ExecelUtility;
 	import com.canossa.genericUtility.PropertyFileUtility;
 	import com.canossa.genericUtility.IConstantPath;
 	import com.canossa.genericUtility.JavaLibrary;
@@ -43,12 +44,12 @@ import com.canossa.objectRepository.ManageDoctorsPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class VadiationDoctorITTest  {
-
-		public static void main(String[] args) throws Exception {
+@Test(groups="sanity")
+		public static void test2() throws Exception {
 
 			PropertyFileUtility fu=new PropertyFileUtility();
 			fu.openPropertyFile(IConstantPath.PROPERTY_PATH);	
-			String url1=fu.getPropertyFileData(PropertyFileKeys.URLTY.convertToString());
+			String url1=fu.getPropertyFileData(PropertyFileKeys.URL.convertToString());
 			String browser1 =fu.getPropertyFileData(PropertyFileKeys.BROWSER.convertToString());
 			String timeout=fu.getPropertyFileData(PropertyFileKeys.TIMEOUT.convertToString());
 

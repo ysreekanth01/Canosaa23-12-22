@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class DoctorSpecializationPage
 {
@@ -48,16 +49,20 @@ public class DoctorSpecializationPage
 	 * To validate the doctor specialization
 	 * @param expectedDocSpecialization
 	 */
-	public void validateSpecialization(String expectedDocSpecialization) {
+	public boolean validateSpecialization(String expectedDocSpecialization) {
 		List<WebElement> validiationSpecialization=specializations;
+		boolean flag=false;
 		for(WebElement oneByOneValidiation:validiationSpecialization) {
 			
 			String actualSpecializationName=oneByOneValidiation.getText();
+			
 			if(actualSpecializationName.equals(expectedDocSpecialization)) {
+				flag =true;
 				System.out.println("Specialization Added Successfully");
 				break;
 			}
 			
-		}
+		}return flag;
+	
 	}
 }

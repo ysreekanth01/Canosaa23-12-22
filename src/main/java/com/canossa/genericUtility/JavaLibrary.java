@@ -12,7 +12,7 @@ public class JavaLibrary {
 	public Object converStringToNumeric(String value,String strategy) {
 		if(strategy.equals("long")) {
 			convertedData = Long.parseLong(value);
-			return convertedData;
+			//return convertedData;
 			
 		}
 		else if(strategy.equals("int")) {
