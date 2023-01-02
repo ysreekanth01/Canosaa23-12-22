@@ -33,12 +33,12 @@ public class BaseClass {
 	protected AddDoctorPage addDoctorPage;
 	protected ManageDoctorsPage manageDoctorsPage;
 
-	@Parameters("browser")
+	//@Parameters("browser")
 	@BeforeClass
-	public void classSetup(String browser) {
+	public void classSetup() {
 		
 		webDriverUtility= new WebDriverUtility();
-		ThreadSafe.setWebdriverUtility(webDriverUtility);
+		
 		propertyFileUtility=new PropertyFileUtility();
 		javaLibrary=new JavaLibrary();
 		execelUtility=new ExecelUtility();
@@ -48,16 +48,16 @@ public class BaseClass {
 		String url1=propertyFileUtility.getPropertyFileData(PropertyFileKeys.URL.convertToString());
 		String browser1 =propertyFileUtility.getPropertyFileData(PropertyFileKeys.BROWSER.convertToString());
 		String timeout=propertyFileUtility.getPropertyFileData(PropertyFileKeys.TIMEOUT.convertToString());
-		
+		String email=execelUtility.getDataFromExcel(IConstantPath.EXCEL_PATH,SheetName.DOCTOR.convertToString(), 4, 2); 
 		
 		Long sec = (Long) javaLibrary.converStringToNumeric(timeout, "long");
 		
 		
 		
-		String email=execelUtility.getDataFromExcel(IConstantPath.EXCEL_PATH,SheetName.DOCTOR.convertToString(), 4, 2);
 		
-		driver = webDriverUtility.launchApplication(browser,sec, url1);
-	
+		ThreadSafe.setWebdriverUtility(webDriverUtility);
+		driver = webDriverUtility.launchApplication(browser1,sec, url1);
+		
 		driver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
 		driver.get(url1);
 

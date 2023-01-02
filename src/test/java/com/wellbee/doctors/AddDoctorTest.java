@@ -28,6 +28,7 @@ import com.canossa.genericUtility.BaseClass;
 	import com.canossa.genericUtility.PropertyFileKeys;
 	
 	import com.canossa.genericUtility.SheetName;
+import com.canossa.objectRepository.AdminCommonPage;
 
 
 	public class AddDoctorTest extends BaseClass {
