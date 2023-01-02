@@ -3,6 +3,7 @@ package com.canossa.genericUtility;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -17,6 +18,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -26,7 +28,7 @@ public class WebDriverUtility {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	private JavascriptExecutor js;
-
+	private Actions act;
 	//PropertyFileUtility fu=new PropertyFileUtility();
 	//String timeout=fu.getPropertyFileData(PropertyFileKeys.TIMEOUT.convertToString());
 	//JavaLibrary jv=new JavaLibrary();
